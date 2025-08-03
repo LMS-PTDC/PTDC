@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore LMS pricing for creative services and events in 2025–2026." />
+  <title>Pricing - LMS</title>
+
+  <!-- 🌗 Prevent Theme Flash on Load -->
+  <script>
+    const savedTheme = localStorage.getItem("theme");
+    const prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+    const theme = savedTheme || (prefersLight ? "light" : "dark");
+    document.documentElement.setAttribute("data-theme", theme);
+  </script>
+
+  <!-- 👓 Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Space+Grotesk:wght@400;600;700&family=Sora:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- 🎨 Styles & Scripts -->
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="menu.js"></script>
+  <script defer src="theme.js"></script>
+</head>
+<body>
+  <div class="layout">
+
+    <!-- 🍔 Hamburger Toggle Button -->
+    <button class="hamburger" aria-label="Toggle Menu" aria-expanded="false">
+      <div class="hamburger-icon-wrapper">
+        <span class="menu-icon">&#9776;</span>
+        <span class="close-icon" style="display: none;">&times;</span>
+      </div>
+    </button>
+
+    <!-- 🧭 Navigation -->
+    <header>
+      <nav>
+        <div class="nav-container">
+          <ul class="nav-links" role="navigation" aria-label="Main navigation">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+
+          <!-- 🌗 Theme Toggle Button -->
+          <button id="themeToggle" class="theme-toggle" aria-label="Toggle Light/Dark Mode">
+            <span class="desktop-label">🌞 Light</span>
+            <span class="mobile-label">🌛</span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- 💳 Pricing Section -->
+    <main class="page-wrapper" role="main">
+      <section class="card pricing-main">
+        <h1 class="card-title">Pricing: 2025–2026</h1>
+        <p>Transparent, accessible pricing for our upcoming services and events:</p>
+      </section>
+
+      <section class="card-group">
+        <div class="card cardleft">
+          <p><strong>🔊 Sound System and Equipment Training:</strong> <strong>£125</strong></p>
+          <p><strong>🧠 Autism Conference:</strong> <strong>£75</strong></p>
+          <p><strong>🎄 Christmas Concert (Winter 2025):</strong> <strong>£50</strong></p>
+        </div>
+
+        <div class="card cardright">
+          <p><strong>🌼 Spring Concert (Spring 2026):</strong> <strong>£50</strong></p>
+          <p><strong>🌞 Shine Showcase (Summer 2026):</strong> <strong>£50</strong></p>
+          <p><strong>🎓 Leavers Celebration (Summer 2026):</strong> <strong>£60</strong></p>
+        </div>
+      </section>
+    </main>
+
+    <!-- 📎 Footer -->
+    <footer class="site-footer">
+      <p>&copy; 2025 LMS — All rights reserved.</p>
+      <p>This website uses cookies to improve performance. No personal data is collected or stored.</p>
+    </footer>
+  </div>
+</body>
+</html>
+

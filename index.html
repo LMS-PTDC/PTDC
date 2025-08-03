@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Welcome to LMS – A clean, modern layout with glassmorphism styling, responsive navigation, and accessibility-focused design." />
+  <title>Home - LMS</title>
+
+  <!-- 🌗 Prevent Theme Flash on Load -->
+  <script>
+    const savedTheme = localStorage.getItem("theme");
+    const prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+    const theme = savedTheme || (prefersLight ? "light" : "dark");
+    document.documentElement.setAttribute("data-theme", theme);
+  </script>
+
+  <!-- 👓 Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Space+Grotesk:wght@400;600;700&family=Sora:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- 🎨 CSS & Scripts -->
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="theme.js"></script>
+</head>
+<body>
+  <div class="layout">
+
+    <!-- 🍔 Hamburger Toggle -->
+    <button class="hamburger" aria-label="Toggle Menu" aria-expanded="false">
+      <div class="hamburger-icon-wrapper">
+        <span class="menu-icon">&#9776;</span>
+        <span class="close-icon" style="display: none;">&times;</span>
+      </div>
+    </button>
+
+    <!-- 🧭 Navigation -->
+    <header>
+      <nav>
+        <div class="nav-container">
+          <ul class="nav-links" role="navigation" aria-label="Main navigation">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+
+          <!-- 🌗 Theme Toggle Button -->
+          <button id="themeToggle" class="theme-toggle" aria-label="Toggle Light/Dark Mode">
+            <span class="desktop-label">🌞 Light</span>
+            <span class="mobile-label">🌛</span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- 🏠 Main Content -->
+    <main class="page-wrapper" role="main">
+      <div class="card-grid">
+        <section class="card index-main">
+          <h1 class="card-title">Welcome to LMS</h1>
+          <h2 class="card-subtitle">Where creativity connects with purpose.</h2>
+          <div class="image-wrapper">
+            <img src="LMS.png" alt="Stylized LMS logo with glassmorphism" class="logo" />
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- 🧭 Footer -->
+    <footer class="site-footer">
+      <p>&copy; 2025 LMS — All rights reserved.</p>
+      <p>This website uses cookies to improve performance. No personal data is collected or stored.</p>
+    </footer>
+  </div>
+
+  <!-- 🔧 Menu Logic -->
+  <script defer src="menu.js"></script>
+</body>
+</html>
+

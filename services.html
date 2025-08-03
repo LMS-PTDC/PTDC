@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Discover LMS services including audio training, logo creation, concert support, and presentation development." />
+  <title>Services - LMS</title>
+
+  <!-- 🌗 Prevent Theme Flash on Load BEFORE CSS -->
+  <script>
+    const savedTheme = localStorage.getItem("theme");
+    const prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+    const theme = savedTheme || (prefersLight ? "light" : "dark");
+    document.documentElement.setAttribute("data-theme", theme);
+  </script>
+
+  <!-- 👓 Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Space+Grotesk:wght@400;600;700&family=Sora:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- 🎨 CSS & JS -->
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="menu.js"></script>
+  <script defer src="theme.js"></script>
+</head>
+<body>
+  <div class="layout">
+
+    <!-- 🍔 Hamburger Toggle Button -->
+    <button class="hamburger" aria-label="Toggle Menu" aria-expanded="false">
+      <div class="hamburger-icon-wrapper">
+        <span class="menu-icon">&#9776;</span>
+        <span class="close-icon" style="display: none;">&times;</span>
+      </div>
+    </button>
+
+    <!-- 🧭 Navigation -->
+    <header>
+      <nav>
+        <div class="nav-container">
+          <ul class="nav-links" role="navigation" aria-label="Main navigation">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+
+          <!-- 🌗 Theme Toggle Button -->
+          <button id="themeToggle" class="theme-toggle" aria-label="Toggle Light/Dark Mode">
+            <span class="desktop-label">🌞 Light</span>
+            <span class="mobile-label">🌛</span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- 💼 Services Overview -->
+    <main class="page-wrapper" role="main">
+      <section class="card services-main">
+        <h1 class="card-title">Our Services</h1>
+        <p>Specialized and custom solutions for educational and creative needs.</p>
+        <div class="contact-actions">
+          <a href="#equipment" class="contact-button button">🎛️ Equipment Training</a>
+          <a href="#production" class="contact-button button">🎤 Concert Support</a>
+          <a href="#logo" class="contact-button button">🖍️ Logo Design</a>
+          <a href="#presentations" class="contact-button button">🧑‍🏫 Presentations</a>
+        </div>
+      </section>
+
+      <!-- 🧮 Services Grid -->
+      <div class="services-grid">
+        <section class="card" id="equipment">
+          <h2 class="card-title">🎛️ Music Equipment Training</h2>
+          <p>Get hands-on instruction in using mixers, microphones, audio interfaces, and DAWs. Designed for beginners and experienced users alike.</p>
+        </section>
+
+        <section class="card" id="production">
+          <h2 class="card-title">🎤 Concert Production & Technical Support</h2>
+          <p>End-to-end support for school concerts and performances — from sound setup to stage transitions and backstage coordination.</p>
+        </section>
+
+        <section class="card" id="logo">
+          <h2 class="card-title">🖍️ Custom Logo Design</h2>
+          <p>Design iconic logos that reflect your group or initiative’s identity. Includes format exports for social media, print, and websites.</p>
+        </section>
+
+        <section class="card" id="presentations">
+          <h2 class="card-title">🧑‍🏫 Interactive Presentation Development</h2>
+          <p>Create visually engaging slides and multimedia-based presentations with structured navigation, captions, and accessibility layers.</p>
+        </section>
+      </div>
+    </main>
+
+    <!-- 🧭 Footer -->
+    <footer class="site-footer">
+      <p>&copy; 2025 LMS — All rights reserved.</p>
+      <p>This website uses cookies to improve performance. No personal data is collected or stored.</p>
+    </footer>
+  </div>
+</body>
+</html>
+
